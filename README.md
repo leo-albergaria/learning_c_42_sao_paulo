@@ -1,9 +1,6 @@
-
-
-
-<img src="imagem" align="left" height="150px" width="150px">
-<h1>  🎲 Título </h1>
-<p> Um Breve relato </p>
+<img src="https://user-images.githubusercontent.com/63436406/161079534-b6afbfb7-34b1-491e-9578-9b9c2a534ae6.png" align="left" height="150px" width="150px">
+<h1>  🎲 42 São Paulo </h1>
+<p> Será apresentado materiais desenvolvidos na linguagem C tratados nos processos de avaliação. Grupo - Vila 6x7</p>
 <br>
 
 ---
