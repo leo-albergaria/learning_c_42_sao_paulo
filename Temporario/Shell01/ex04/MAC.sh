@@ -1,2 +1,2 @@
 #!/bin/sh
-ifconfig | grep "ether" | cut -c 14-70
+ifconfig | grep "ether"
