@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 20:49:14 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 14:07:40 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/10 12:02:54 by lealberg          #+#    #+#             */
+/*   Updated: 2022/04/10 14:07:56 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	if (n < 0)
+	{
+		write(1, "N", 1);
+	}
+	else
+	{
+		write(1, "P", 1);
+	}
 }

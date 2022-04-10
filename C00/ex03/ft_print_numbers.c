@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 20:49:14 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 14:07:40 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/10 11:53:09 by lealberg          #+#    #+#             */
+/*   Updated: 2022/04/10 14:07:50 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-	write(1, "abcdefghijklmnopqrstuvwxyz", 26);
+	write(1, "0123456789", 10);
 }
