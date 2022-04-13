@@ -5,29 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:50:13 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 22:10:18 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/13 19:42:50 by jpedro-2          #+#    #+#             */
+/*   Updated: 2022/04/13 21:11:04 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_rev_int_tab(int	*tab, int size)
 {
 	int	i;
-	int	count;
-	int	temp[5000];
+	int	aux;
 
-	i = size - 1;
-	count = 0;
-	while (i >= 0)
+	i = 0;
+	while (i < size / 2)
 	{
-		temp[count] = tab[i];
-		i--;
-		count++;
-	}
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = temp[count];
-		count++;
+		aux = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = aux;
+		i++;
 	}
 }

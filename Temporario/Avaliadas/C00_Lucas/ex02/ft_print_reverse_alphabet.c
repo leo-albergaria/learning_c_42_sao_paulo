@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jalucas- <jalucas-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:50:13 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 22:10:18 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/12 16:37:16 by jalucas-          #+#    #+#             */
+/*   Updated: 2022/04/12 16:39:39 by jalucas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	i;
-	int	count;
-	int	temp[5000];
+/* descrição: programa para printar o alphabeto [A-Z]
+ASCII numero de A=65 ; Z 90
+ASCII numero de a=97 ; z 122
+*/
+#include <unistd.h>
 
-	i = size - 1;
-	count = 0;
-	while (i >= 0)
+void	ft_print_reverse_alphabet(void)
+{
+	char	c;
+
+	c = 'z';
+	while (c >= 'a')
 	{
-		temp[count] = tab[i];
-		i--;
-		count++;
-	}
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = temp[count];
-		count++;
+		write(1, &c, 1);
+		c--;
 	}
 }

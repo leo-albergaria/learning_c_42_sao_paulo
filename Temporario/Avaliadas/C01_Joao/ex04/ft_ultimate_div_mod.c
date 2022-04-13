@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpedro-2 <jpedro-2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:50:13 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 22:10:18 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/13 19:37:18 by jpedro-2          #+#    #+#             */
+/*   Updated: 2022/04/13 19:38:49 by jpedro-2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_ultimate_div_mod(int	*a, int		*b)
 {
-	int	i;
-	int	count;
-	int	temp[5000];
+	int		divide;
+	int		resto;
 
-	i = size - 1;
-	count = 0;
-	while (i >= 0)
-	{
-		temp[count] = tab[i];
-		i--;
-		count++;
-	}
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = temp[count];
-		count++;
-	}
+	divide = *a / *b;
+	resto = *a % *b;
+	*a = divide;
+	*b = resto;
 }

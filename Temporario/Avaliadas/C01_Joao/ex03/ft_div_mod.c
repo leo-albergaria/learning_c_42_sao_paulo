@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpedro-2 <jpedro-2@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:50:13 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 22:10:18 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/13 19:33:06 by jpedro-2          #+#    #+#             */
+/*   Updated: 2022/04/13 19:36:55 by jpedro-2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_div_mod(int a, int b, int	*div, int	*mod)
 {
-	int	i;
-	int	count;
-	int	temp[5000];
-
-	i = size - 1;
-	count = 0;
-	while (i >= 0)
-	{
-		temp[count] = tab[i];
-		i--;
-		count++;
-	}
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = temp[count];
-		count++;
-	}
+	*div = a / b;
+	*mod = a % b;
 }

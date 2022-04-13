@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 17:50:13 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 22:10:18 by lealberg         ###   ########.fr       */
+/*   Created: 2022/04/13 19:40:42 by jpedro-2          #+#    #+#             */
+/*   Updated: 2022/04/13 21:07:30 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
+int	ft_strlen(char	*str)
 {
-	int	i;
-	int	count;
-	int	temp[5000];
+	int	tam;
 
-	i = size - 1;
-	count = 0;
-	while (i >= 0)
+	tam = 0;
+	while (*str != '\0')
 	{
-		temp[count] = tab[i];
-		i--;
-		count++;
+		str++;
+		tam++;
 	}
-	count = 0;
-	while (count < size)
-	{
-		tab[count] = temp[count];
-		count++;
-	}
+	return (tam);
 }

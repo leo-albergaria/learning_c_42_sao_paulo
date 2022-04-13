@@ -6,15 +6,15 @@
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 17:17:35 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/10 17:19:38 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/04/10 22:12:30 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	div;
-	
-	div = a* / *b;
+
+	div = *a / *b ;
 	*b = *a % *b;
-	*a = div;
+	*a = div ;
 }
