@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-mora <gde-mora@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 15:10:31 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/17 18:39:22 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/04/18 00:55:20 by gde-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "definitions.h"
 
-int	validar(int argc, char *argv[])
+int	validate(int argc, char *argv[])
 {
 	int		sum_digits;
 	int		sum_sizes;
@@ -36,9 +36,9 @@ int	main(int argc, char *argv[])
 {
 	int		i;
 	int		m;
-	char	matriz[36];
+	char	matrix[36];
 
-	if (validar(argc, argv) == 1)
+	if (validate(argc, argv) == 1)
 		return (1);
 	i = 0;
 	m = 0;
@@ -46,10 +46,10 @@ int	main(int argc, char *argv[])
 	{	
 		if (argv[1][i] >= '0' && argv[1][i] <= '4')
 		{
-			matriz[m] = argv[1][i];
+			matrix[m] = argv[1][i];
 			m++;
 		}
 		i++;
 	}
-	ft_calculator_matrix(m, matriz);
+	ft_calculator_matrix(m, matrix);
 }

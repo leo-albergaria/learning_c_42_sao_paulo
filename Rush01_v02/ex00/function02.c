@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   function02.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-mora <gde-mora@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 19:52:47 by lealberg          #+#    #+#             */
-/*   Updated: 2022/04/17 18:43:32 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/04/18 01:11:29 by gde-mora         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,58 +50,63 @@ void	ft_show_matrix(int m, char *str)
 	}
 }
 
-void	ft_show_preencher(char *origem, char *destino)
+void	ft_show_fill(char *origin, char *dest)
 {
-	destino[0] = ' ';
-	destino[5] = ' ';
-	destino[30] = ' ';
-	destino[35] = ' ';
-	destino[1] = origem[0];
-	destino[2] = origem[1];
-	destino[3] = origem[2];
-	destino[4] = origem[3];
-	destino[31] = origem[4];
-	destino[32] = origem[5];
-	destino[33] = origem[6];
-	destino[34] = origem[7];
-	destino[6] = origem[8];
-	destino[12] = origem[9];
-	destino[18] = origem[10];
-	destino[24] = origem[11];
-	destino[11] = origem[12];
-	destino[17] = origem[13];
-	destino[23] = origem[14];
-	destino[29] = origem[15];
+	dest[0] = ' ';
+	dest[5] = ' ';
+	dest[30] = ' ';
+	dest[35] = ' ';
+	dest[1] = origin[0];
+	dest[2] = origin[1];
+	dest[3] = origin[2];
+	dest[4] = origin[3];
+	dest[31] = origin[4];
+	dest[32] = origin[5];
+	dest[33] = origin[6];
+	dest[34] = origin[7];
+	dest[6] = origin[8];
+	dest[12] = origin[9];
+	dest[18] = origin[10];
+	dest[24] = origin[11];
+	dest[11] = origin[12];
+	dest[17] = origin[13];
+	dest[23] = origin[14];
+	dest[29] = origin[15];
 }
 
-void	ft_achar4e1(char *destino)
+void	check1(int i, char dest[i])
+{
+	if (i >= 1 && i <= 4)
+		dest[i + 6] = '1';
+	if (i == 6 || i == 12 || i == 18 || i == 24 || i == 30)
+		dest[i + 1] = '1';
+	if (i == 11 || i == 17 || i == 23 || i == 29 || i == 35)
+		dest[i - 1] = '1';
+	if (i >= 31 && i <= 34)
+		dest[i - 6] = '1';
+}
+
+void	ft_find_4and1(char *dest)
 {
 	int	i;
 
 	i = 0;
-	while (destino[i])
+	while (dest[i])
 	{
-		if (ft_atoi(destino[i]) == 4)
+		if (ft_atoi(dest[i]) == 4)
 		{
-			if (i >= 1 && i <= 4)
-				destino[i + 6] = '1';
-			if (i == 6 || i == 12 || i == 18 || i == 24 || i == 30)
-				destino[i + 1] = '1';
-			if (i == 11 || i == 17 || i == 23 || i == 29 || i == 35)
-				destino[i - 1] = '1';
-			if (i >= 31 && i <= 34)
-				destino[i - 6] = '1';
+			check1(i, dest);
 		}
-		if (ft_atoi(destino[i]) == 1)
+		if (ft_atoi(dest[i]) == 1)
 		{
 			if (i >= 1 && i <= 4)
-				destino[i + 6] = '4';
+				dest[i + 6] = '4';
 			if (i == 6 || i == 12 || i == 18 || i == 24 || i == 30)
-				destino[i + 1] = '4';
+				dest[i + 1] = '4';
 			if (i == 11 || i == 17 || i == 23 || i == 29 || i == 35)
-				destino[i - 1] = '4';
+				dest[i - 1] = '4';
 			if (i >= 31 && i <= 34)
-				destino[i - 6] = '4';
+				dest[i - 6] = '4';
 		}
 		i++;
 	}
