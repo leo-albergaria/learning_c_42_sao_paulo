@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mainC00.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/13 17:01:41 by lealberg          #+#    #+#             */
+/*   Updated: 2022/04/14 15:40:31 by lealberg         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #ex00
-// void ft_putchar(void);
+// void ft_putchar(char c);
 // int  main(void)
 // {
 // 	ft_putchar('a');
 // 	return 0;
 // }
-
 
 // #ex01
 // void ft_print_alphabet(void);
@@ -32,11 +43,11 @@
 // }
 
 //#ex04
-// void ft_print_comb(int n);
+// void	ft_is_negative(int n);
 // int	main(void)
 // {
-// 	ft_print_comb(-2);
-// 	ft_print_comb(2);
+// 	ft_is_negative(-2);
+// 	ft_is_negative(2);
 // 	return 0;
 // }
 
@@ -48,7 +59,7 @@
 // 	return 0;
 // }
 
-// #ex06
+// // #ex06
 // void ft_print_comb2(void);
 // int	main(void)
 // {
