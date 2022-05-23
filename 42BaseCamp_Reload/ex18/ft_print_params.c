@@ -6,16 +6,11 @@
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 00:38:21 by lealberg          #+#    #+#             */
-/*   Updated: 2022/05/22 01:14:36 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:52:18 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_print_params(char *str)
 {
@@ -25,4 +20,16 @@ void	ft_print_params(char *str)
 		str++;
 	}
 	ft_putchar('\n');
+}
+
+int	main(int argc, char *argv[])
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		ft_print_params(argv[i]);
+		i++;
+	}
 }

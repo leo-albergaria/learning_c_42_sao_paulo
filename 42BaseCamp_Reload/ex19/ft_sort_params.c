@@ -6,16 +6,11 @@
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 01:16:23 by lealberg          #+#    #+#             */
-/*   Updated: 2022/05/22 15:40:11 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:50:24 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -52,4 +47,30 @@ void	ft_putmain_args(int argc, char *argv[])
 		ft_putchar('\n');
 		index++;
 	}
+}
+
+int	main(int argc, char *argv[])
+{
+	int		index1;
+	int		index2;
+	char	*aux;
+
+	index1 = 1;
+	index2 = 1;
+	while (index1 < argc)
+	{
+		while (index2 < argc - 1)
+		{
+			if (ft_strcmp(argv[index2], argv[index2 + 1]) > 0)
+			{
+				aux = argv[index2];
+				argv[index2] = argv[index2 + 1];
+				argv[index2 + 1] = aux;
+			}
+			index2++;
+		}
+		index2 = 1;
+		index1++;
+	}
+	ft_putmain_args(argc, argv);
 }

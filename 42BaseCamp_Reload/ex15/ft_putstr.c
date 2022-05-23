@@ -6,16 +6,11 @@
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 00:18:07 by lealberg          #+#    #+#             */
-/*   Updated: 2022/05/22 00:23:29 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:27:30 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {

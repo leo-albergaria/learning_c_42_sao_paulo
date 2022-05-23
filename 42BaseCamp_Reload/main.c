@@ -6,7 +6,7 @@
 /*   By: lealberg <lealberg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 21:01:25 by lealberg          #+#    #+#             */
-/*   Updated: 2022/05/22 15:30:20 by lealberg         ###   ########.fr       */
+/*   Updated: 2022/05/23 23:03:29 by lealberg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ void	ft_putchar(char *str);
 void	ft_putstr(char *str);
 void	ft_putmain_args(int argc, char *argv[]);
 
-int		main(int argc, char *argv[])
+// int		main(int argc, char *argv[])
+int		main(void)
 {
 	//ex06
-	// ft_print_alphabet();
+	ft_print_alphabet();
 
 	//ex07
 	// ft_print_numbers();
@@ -109,27 +110,26 @@ int		main(int argc, char *argv[])
 	// }
 
 	//ex19
-	int		index;
-	int		index2;
-	char	*aux;
+	// int		index;
+	// int		index2;
+	// char	*aux;
 
-	index = 1;
-	index2 = 1;
-	while (index < argc)
-	{
-		while (index2 < argc - 1)
-		{
-			if (ft_strcmp(argv[index2], argv[index2 + 1]) > 0)
-			{
-				aux = argv[index2];
-				argv[index2] = argv[index2 + 1];
-				argv[index2 + 1] = aux;
-			}
-			index2++;
-		}
-		index2 = 1;
-		index++;
-	}
-	ft_putmain_args(argc, argv);
-
+	// index = 1;
+	// index2 = 1;
+	// while (index < argc)
+	// {
+	// 	while (index2 < argc - 1)
+	// 	{
+	// 		if (ft_strcmp(argv[index2], argv[index2 + 1]) > 0)
+	// 		{
+	// 			aux = argv[index2];
+	// 			argv[index2] = argv[index2 + 1];
+	// 			argv[index2 + 1] = aux;
+	// 		}
+	// 		index2++;
+	// 	}
+	// 	index2 = 1;
+	// 	index++;
+	// }
+	// ft_putmain_args(argc, argv);
 }
